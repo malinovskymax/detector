@@ -13,7 +13,7 @@ class Detector::Ruby < Detector::Language
   end
 
   def self.detected?
-    File.exist?('Gemfile') || File.exist?('Gemfile.lock') || FIle.exist?('.ruby-version')
+    File.exist?('Gemfile') || File.exist?('Gemfile.lock') || File.exist?('.ruby-version')
   end
 
   def self.name
