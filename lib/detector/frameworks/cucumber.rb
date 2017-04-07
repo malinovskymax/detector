@@ -1,7 +1,7 @@
 # Cucumber framework class
 
-require 'detector/frameworks/framework'
-require 'detector/frameworks/testing_framework'
+require 'detector/frameworks/base/framework'
+require 'detector/frameworks/base/testing_framework'
 
 class Detector::Cucumber < Detector::Framework
 
@@ -27,7 +27,7 @@ class Detector::Cucumber < Detector::Framework
 
   def self.version
     #TODO implement logic
-    'Not defined yet'
+    'Not implemented yet'
   end
 
   def self.run_tests_command

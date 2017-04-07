@@ -28,17 +28,17 @@ class Detector::Ruby < Detector::Language
     version_detected = nil
 
     if File.exist?('Gemfile.lock')
-      version_detected = File.open('Gemfile.lock').read.match(/^\s{3}ruby\s\d\.\d\.\d/)
+      version_detected = File.open('Gemfile.lock').read.match(/^\s{3}ruby\s\d\.\d[\\.\d]*/)
       version = $&.gsub(/^\s{3}ruby\s/, '') if version_detected
     end
 
     if File.exist?('Gemfile') && !version_detected
-      version_detected = File.open('Gemfile').read.match(/^ruby\s['|"]\d\.\d\.\d['|"]/)
-      version = $&.match(/\d\.\d\.\d/)[0] if version_detected
+      version_detected = File.open('Gemfile').read.match(/^ruby\s['|"]\d\.\d[\\.\d]*['|"]/)
+      version = $&.match(/\d\.\d[\\.\d]*/)[0] if version_detected
     end
 
     if File.exist?('.ruby-version') && !version_detected
-      version_detected = File.open('.ruby-version').read.match(/\d\.\d\.\d/)
+      version_detected = File.open('.ruby-version').read.match(/\d\.\d[\\.\d]*/)
       version = $& if version_detected
     end
 

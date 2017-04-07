@@ -6,6 +6,6 @@ module Detector::TestingFramework
   end
 
   def run_tests_command
-    'Not defined yet'
+    'Not implemented'
   end
 end

@@ -7,7 +7,7 @@ class Detector::Language
   end
 
   def self.name
-    'Not defined yet'
+    'Not implemented'
   end
 
   def self.frameworks
@@ -15,7 +15,7 @@ class Detector::Language
   end
 
   def self.version
-    'Not defined yet'
+    'Not implemented'
   end
 
 end

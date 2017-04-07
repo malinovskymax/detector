@@ -7,15 +7,15 @@ class Detector::Framework
   end
 
   def self.name
-    'Not defined yet'
+    'Not implemented'
   end
 
   def self.purpose
-    'Not defined yet'
+    'Not implemented'
   end
 
   def self.version
-    'Not defined yet'
+    'Not implemented'
   end
 
 end
